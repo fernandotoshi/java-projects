@@ -17,44 +17,41 @@ public class BancoDeDados {
     //  1       "Hospital"      {"Médico"; Enfermeiro"; "Bandido"}
 
     public void montaBanco() {
-        ArrayList<Personagem> listPersonagem = new ArrayList<Personagem>();
-        listPersonagem.add(new Personagem("Monge"));
-        listPersonagem.add(new Personagem("Faxineira"));
-        listPersonagem.add(new Personagem("Segurança"));
-        listPersonagem.add(new Personagem("Cliente"));
-        listPersonagem.add(new Personagem("Chapeiro"));
-        listPersonagem.add(new Personagem("Gerente"));
-        listPersonagem.add(new Personagem("Garçom"));
-        listPersonagem.add(new Personagem("Rato"));
-        listPersonagem.add(new Personagem("Cozinheiro"));
-        listPersonagem.add(new Personagem("Criança"));
-        listPersonagem.add(new Personagem("Raquin"));
-        listPersonagem.add(new Personagem("Famoso"));
-        bancoDeDados.add(adicionaLugar("Restaurante", listPersonagem));
 
-        ArrayList<Personagem> listPersonagem2 = new ArrayList<Personagem>();
-        listPersonagem2.add(new Personagem("Médico"));
-        listPersonagem2.add(new Personagem("Enfermeiro"));
-        listPersonagem2.add(new Personagem("Bandido"));
-        listPersonagem2.add(new Personagem("Covid"));
-        listPersonagem2.add(new Personagem("Recepcionista"));
-        listPersonagem2.add(new Personagem("Segurança"));
-        listPersonagem2.add(new Personagem("Cirurgião"));
-        listPersonagem2.add(new Personagem("Faxineiro"));
-        listPersonagem2.add(new Personagem("Enfermeira"));
-        bancoDeDados.add(adicionaLugar("Hospital", listPersonagem2));
+        //Titanic
+        String[] listPersonagem1 = new String[] {"Músico", "Leonardo DiCaprio", "Capitão", "Rose", "Lagosta que sobreviveu", "Vilão", "Iceberg", "Garçom", "Madame", "Gaivota", "Salva Vidas"};
+        bancoDeDados.add(adicionaLugar("Titanic", convertStringPersonagem(listPersonagem1)));
 
-        ArrayList<Personagem> listPersonagem3 = new ArrayList<Personagem>();
-        listPersonagem3.add(new Personagem("Traficante"));
-        listPersonagem3.add(new Personagem("Trans"));
-        listPersonagem3.add(new Personagem("Bi"));
-        listPersonagem3.add(new Personagem("DJ"));
-        listPersonagem3.add(new Personagem("Segurança"));
-        listPersonagem3.add(new Personagem("Bebado"));
-        listPersonagem3.add(new Personagem("Recepcionista"));
-        listPersonagem3.add(new Personagem("Bilheteiro"));
-        listPersonagem3.add(new Personagem("Famosa"));
-        bancoDeDados.add(adicionaLugar("Balada Augusta", listPersonagem3));
+        //Acampamento
+        String[] listPersonagem2 = new String[] {"Monitor", "Árvore", "Bear Grills", "Urso Pardo", "Escoteiro", "Viajante", "Louco de doce", "Ex-militar", "Gringo", "Maconheiro"};
+        bancoDeDados.add(adicionaLugar("Acampamento", convertStringPersonagem(listPersonagem2)));
+
+        //Zoológico
+        String[] listPersonagem3 = new String[] {"Criança chata", "Jacaré", "Cobra", "Rinoceronte", "Famoso", "Zelador", "Youtuber", "Tartaruga", "Hipopótamo", "Guia de Visita", "Dono do zoo"};
+        bancoDeDados.add(adicionaLugar("Zoológico", convertStringPersonagem(listPersonagem3)));
+
+        //Set de Filmagem
+        String[] listPersonagem4 = new String[] {"Figurante", "Diretor", "Neymar", "Atriz", "Ator", "Músico", "Maquiadora", "Cameraman", "Figurinista"};
+        bancoDeDados.add(adicionaLugar("Set de Filmagem", convertStringPersonagem(listPersonagem4)));
+
+        //Faculdade
+        String[] listPersonagem5 = new String[] {"Estudante", "Cozinheiro do RU", "Professor", "Técnico de laboratório", "Faxineira", "Aluno que vende docinhos", "Bibliotecário", "Estagiário do professor", "Bixo/Bixete"};
+        bancoDeDados.add(adicionaLugar("Faculdade", convertStringPersonagem(listPersonagem5)));
+
+        //Mercado
+        String[] listPersonagem6 = new String[] {"Cliente furtando coisas", "Toguro", "Açougueiro", "Repositor", "Marombeiro", "Cliente", "Entregador", "Gerente", "Caixa"};
+        bancoDeDados.add(adicionaLugar("Mercado", convertStringPersonagem(listPersonagem6)));
+
+        //Egito
+        String[] listPersonagem7 = new String[] {"Celebridade", "Faraó", "Celebridade", "Nerfetite (Noiva do Faraó)", "Guia de turismo", "Múmia", "Turista", "Miragem", "Camelo", "Sacerdote"};
+        bancoDeDados.add(adicionaLugar("Egito", convertStringPersonagem(listPersonagem7)));
+
+        //Praia
+        String[] listPersonagem8 = new String[] {"Vendedor de sorvete", "Caiçara", "Toguro", "Banhista", "Tartaruga", "Criança Perdida", "Surfista", "Salva Vidas", "Tio do queijinho"};
+        bancoDeDados.add(adicionaLugar("Praia", convertStringPersonagem(listPersonagem8)));
+
+        //Louge Hookah
+        String[] listPersonagem9 = new String[] {"Parça", "Caixa", "Recepcionista", "O cara do carvão", "Cliente", "Playboy", "Preparadora de rosh", "Lavador de vaso", "Funkeiro"};
     }
 
     public Lugar adicionaLugar(String nomeLugar, ArrayList<Personagem> listPersonagem) {
@@ -73,5 +70,13 @@ public class BancoDeDados {
 
     public ArrayList<Lugar> getBancoDeDados() {
         return this.bancoDeDados;
+    }
+
+    public ArrayList<Personagem> convertStringPersonagem(String[] listaString){
+        ArrayList<Personagem> lista = new ArrayList<Personagem>();
+        for(int i = 0; i < listaString.length; i++) {
+            lista.add(new Personagem(listaString[i]));
+        }
+        return lista;
     }
 }
