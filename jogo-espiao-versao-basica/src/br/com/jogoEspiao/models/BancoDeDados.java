@@ -52,6 +52,14 @@ public class BancoDeDados {
 
         //Louge Hookah
         String[] listPersonagem9 = new String[] {"Parça", "Caixa", "Recepcionista", "O cara do carvão", "Cliente", "Playboy", "Preparadora de rosh", "Lavador de vaso", "Funkeiro"};
+        bancoDeDados.add(adicionaLugar("Louge Hookah", convertStringPersonagem(listPersonagem9)));
+
+        //Salão de Beleza
+        String[] listPersonagem10 = new String[] {"Faxineiro", "Madame", "Namorado aguardando", "Estagiária", "Estilista de cabelo", "Cabeleleira leila", "Cabelereiro", "Manicure", "Dona de salão"};
+        bancoDeDados.add(adicionaLugar("Salão de Beleza", convertStringPersonagem(listPersonagem10)));
+
+        //Petshop
+        String[] listPersonagem11 = new String[] {"Veterinárip", "Dono de pet", "Furão", "Papagaio", "Hamister", "Adestrador", };
     }
 
     public Lugar adicionaLugar(String nomeLugar, ArrayList<Personagem> listPersonagem) {
