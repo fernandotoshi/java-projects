@@ -32,8 +32,18 @@ public class GameUtil {
 
     public static ArrayList<Jogador> atribuiPersonagens(ArrayList<Jogador> listJogadores, ArrayList<Personagem> listPersonagens, int numEspioes) {
         listPersonagens = sorteiaPersonagem(listPersonagens);
-
+        int numeroIdealEspioes = calculaNumeroEspioes(listJogadores.size());
         if (listPersonagens.size() > listJogadores.size()) {
+            for (int i = 0; i < listJogadores.size() - numeroIdealEspioes; i++) {
+                listJogadores.get(i).setPersonagem(listPersonagens.get(i));
+            }
+            for (int i = listJogadores.size() - numeroIdealEspioes; i < listJogadores.size(); i++) {
+                listJogadores.get(i).setPersonagem(new Personagem("Espião"));
+            }
+        }
+
+
+        /*if (listPersonagens.size() > listJogadores.size()) {
             for (int i = 0; i < listJogadores.size() - numEspioes; i++) {
                 listJogadores.get(i).setPersonagem(listPersonagens.get(i));
             }
@@ -42,7 +52,7 @@ public class GameUtil {
             }
         } else {
 
-        }
+        }*/
         return listJogadores;
     }
 
@@ -64,5 +74,14 @@ public class GameUtil {
         } catch (Exception ex) {
             ex.getMessage();
         }
+    }
+
+    /**
+     * @author yutaka
+     * @date
+     */
+    public static int calculaNumeroEspioes(int qtddJogadores){
+        int numEspioes = (int)(Math.ceil(qtddJogadores * 0.33));
+        return numEspioes;
     }
 }
