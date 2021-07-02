@@ -3,6 +3,7 @@ package br.com.jogoEspiao.tests;
 import br.com.jogoEspiao.models.*;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Scanner;
 
 public class TesteBancoDeDados {
@@ -11,7 +12,7 @@ public class TesteBancoDeDados {
         Scanner sc = new Scanner(System.in);
         BancoDeDados bd = new BancoDeDados();
         ArrayList<Lugar> listLugares = new ArrayList<Lugar>();
-        listLugares = bd.getBancoDeDados();
+        listLugares = bd.getListaLugares();
         ArrayList<Jogador> listaJogadores = new ArrayList<Jogador>();
         int numeroEspioes = 2;
 
@@ -29,6 +30,7 @@ public class TesteBancoDeDados {
                             break;
                         case 2:
                             //implementação de jogar()
+                            // - Implementar outra rota
                             loopingMenu = false;
                             GameUtil.limpaPromptComando();
                             break;
@@ -64,15 +66,11 @@ public class TesteBancoDeDados {
                     }
                 }
 
-
                 Lugar lugarSorteado = GameUtil.pegaLugarAleatorio(bd);
-                bd.getBancoDeDados().remove(lugarSorteado);
-
-                listaJogadores = GameUtil.sorteiaJogadores(listaJogadores);
 
                 listaJogadores = GameUtil.atribuiPersonagens(listaJogadores, lugarSorteado.getListPersonagem(), numeroEspioes);
 
-                listaJogadores = GameUtil.sorteiaJogadores(listaJogadores);
+                Collections.shuffle(listaJogadores);
 
                 System.out.println("Pronto para começar? Aperte ENTER...");
                 sc.nextLine();
@@ -96,10 +94,18 @@ public class TesteBancoDeDados {
                 System.out.println("Que o jogo começe, para voltar ao menu aperte ENTER...");
                 sc.nextLine();
                 GameUtil.limpaPromptComando();
+
+                bd.getListaLugares().remove(lugarSorteado);
             }
         } catch(Exception ex) {
             System.out.println("Acabaram os lugares cadastrados, reinicie o programa");
         }
+
+        Personagem a = new Personagem("Nando");
+        ArrayList<Lugar> l = new ArrayList<Lugar>();
+        ArrayList<Object> listaTeste = new ArrayList<Object>();
+        listaTeste.add(a);
+        listaTeste.add(l);
 
     }
 

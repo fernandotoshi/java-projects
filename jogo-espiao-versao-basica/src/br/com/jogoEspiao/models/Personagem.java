@@ -1,6 +1,7 @@
 package br.com.jogoEspiao.models;
 
 public class Personagem {
+
     private String nomePersonagem;
 
     public Personagem(String nomePersonagem) {
@@ -14,4 +15,5 @@ public class Personagem {
     public String getNomePersonagem() {
         return this.nomePersonagem;
     }
+
 }
