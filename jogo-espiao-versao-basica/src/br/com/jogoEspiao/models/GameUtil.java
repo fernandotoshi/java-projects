@@ -22,7 +22,7 @@ public class GameUtil {
     public static ArrayList<Jogador> atribuiPersonagens(ArrayList<Jogador> listJogadores, ArrayList<Personagem> listPersonagens, int numEspioes) {
         Collections.shuffle(listPersonagens); // Na classe Collections existem métodos para ordenação de lista
         int numeroIdealEspioes = calculaNumeroEspioes(listJogadores.size());
-        if (listPersonagens.size() > listJogadores.size()) {
+        if (listPersonagens.size() >= listJogadores.size()) {
             for (int i = 0; i < listJogadores.size() - numeroIdealEspioes; i++) {
                 listJogadores.get(i).setPersonagem(listPersonagens.get(i));
             }
@@ -30,7 +30,18 @@ public class GameUtil {
                 listJogadores.get(i).setPersonagem(new Personagem("Espião"));
             }
         }
-
+        else {
+            ArrayList<Personagem> listaDobradaPersonagens = (ArrayList<Personagem>) listPersonagens.clone();
+            for (int i = 0; i < listPersonagens.size(); i++){
+                listaDobradaPersonagens.add((listPersonagens.get(i)));
+            }
+            for (int i = 0; i < listJogadores.size() - numeroIdealEspioes; i++) {
+                listJogadores.get(i).setPersonagem(listaDobradaPersonagens.get(i));
+            }
+            for (int i = listJogadores.size() - numeroIdealEspioes; i < listJogadores.size(); i++) {
+                listJogadores.get(i).setPersonagem(new Personagem("Espião"));
+            }
+        }
         return listJogadores;
     }
 

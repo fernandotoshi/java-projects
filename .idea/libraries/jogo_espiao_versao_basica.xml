@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="jogo-espiao-versao-basica">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/jogo-espiao-versao-basica/out/artifacts/jogo_espiao_versao_basica_jar/jogo-espiao-versao-basica.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

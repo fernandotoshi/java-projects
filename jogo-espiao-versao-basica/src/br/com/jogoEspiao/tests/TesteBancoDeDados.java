@@ -91,7 +91,7 @@ public class TesteBancoDeDados {
                     sc.nextLine();
                     GameUtil.limpaPromptComando();
                 }
-                System.out.println("Que o jogo começe, para voltar ao menu aperte ENTER...");
+                System.out.println("Que o jogo comece, para voltar ao menu aperte ENTER...");
                 sc.nextLine();
                 GameUtil.limpaPromptComando();
 

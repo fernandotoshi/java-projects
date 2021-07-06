@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/ByteBank/ByteBank.iml" filepath="$PROJECT_DIR$/ByteBank/ByteBank.iml" />
+      <module fileurl="file://$PROJECT_DIR$/bytebank-biblioteca/bytebank-biblioteca.iml" filepath="$PROJECT_DIR$/bytebank-biblioteca/bytebank-biblioteca.iml" />
+      <module fileurl="file://$PROJECT_DIR$/bytebank-composto/bytebank-composto.iml" filepath="$PROJECT_DIR$/bytebank-composto/bytebank-composto.iml" />
+      <module fileurl="file://$PROJECT_DIR$/bytebank-encapsulado/bytebank-encapsulado.iml" filepath="$PROJECT_DIR$/bytebank-encapsulado/bytebank-encapsulado.iml" />
+      <module fileurl="file://$PROJECT_DIR$/bytebank-encapsulamento/bytebank-encapsulamento.iml" filepath="$PROJECT_DIR$/bytebank-encapsulamento/bytebank-encapsulamento.iml" />
+      <module fileurl="file://$PROJECT_DIR$/bytebank-herdado/bytebank-herdado.iml" filepath="$PROJECT_DIR$/bytebank-herdado/bytebank-herdado.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gerenciador-de-cursos/gerenciador-de-cursos.iml" filepath="$PROJECT_DIR$/gerenciador-de-cursos/gerenciador-de-cursos.iml" />
+      <module fileurl="file://$PROJECT_DIR$/java-io/java-io.iml" filepath="$PROJECT_DIR$/java-io/java-io.iml" />
+      <module fileurl="file://$PROJECT_DIR$/java-pilha/java-pilha.iml" filepath="$PROJECT_DIR$/java-pilha/java-pilha.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/java-projects.iml" filepath="$PROJECT_DIR$/.idea/java-projects.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jogo-espiao-versao-basica/jogo-espiao-versao-basica.iml" filepath="$PROJECT_DIR$/jogo-espiao-versao-basica/jogo-espiao-versao-basica.iml" />
+      <module fileurl="file://$PROJECT_DIR$/primeiro-projeto/primeiro-projeto.iml" filepath="$PROJECT_DIR$/primeiro-projeto/primeiro-projeto.iml" />
+    </modules>
+  </component>
+</project>
